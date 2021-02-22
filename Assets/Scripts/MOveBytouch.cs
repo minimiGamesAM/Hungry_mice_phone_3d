@@ -21,6 +21,7 @@ public class MOveBytouch : MonoBehaviour
             transform.position = touchPosition;
         }
 
+
         
     }
 }
