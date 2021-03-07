@@ -17,6 +17,8 @@ public class Drag3d : MonoBehaviour
     public UnityEvent OnBeginDrag;
     public UnityEvent OnEndDrag;
 
+    float smooth = 5.0f;
+
     public 
 
     // Start is called before the first frame update
@@ -30,10 +32,18 @@ public class Drag3d : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Quaternion target = Quaternion.Euler(0, 0, 0);
+
+
         if (Dragging)
         {
             Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, ZPosition);
+
+            //Vector2 position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
             transform.position = MainCamera.ScreenToWorldPoint(position + new Vector3(offset.x, offset.y));
+            //transform.position = MainCamera.ScreenToWorldPoint(position + new Vector2(offset.x, offset.y));
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
         }
         
     }
