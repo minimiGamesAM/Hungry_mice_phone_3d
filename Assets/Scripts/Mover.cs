@@ -8,6 +8,8 @@ public class Mover : MonoBehaviour
 {
     private Vector3 goal;
     private NavMeshAgent agent;
+    public GameObject cameraParent;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,7 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        goal = transform.position + Vector3.right * Input.GetAxis("Horizontal") + Vector3.forward * Input.GetAxis("Vertical");
+        goal = transform.position + cameraParent.transform .right * Input.GetAxis("Horizontal") + cameraParent.transform . forward * Input.GetAxis("Vertical");
 
         agent.destination = goal;
 
