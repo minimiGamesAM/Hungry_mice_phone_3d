@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - MovingObject
-  - coin
   layers:
   - Default
   - TransparentFX

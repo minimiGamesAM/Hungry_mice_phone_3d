@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-//game Prototipe for test
-
 public class CameraScript : MonoBehaviour
 {
 
@@ -26,14 +23,10 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
 
-        yaw += speedH * Input.GetAxis("Mouse X")+ Input.GetAxis ("HorizontalRight");
-        pitch -= speedV * Input.GetAxis("Mouse Y") + Input.GetAxis("VerticalRight");
-
-        
+        yaw += speedH * Input.GetAxis("Mouse X");
+        pitch -= speedV * Input.GetAxis("Mouse Y");
 
         transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
-
-
 
     }
 }
