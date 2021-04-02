@@ -50,7 +50,7 @@ public class CameraScript : MonoBehaviour
         {
             // inputH = CrossPlatformInputManager.GetAxis("Mouse X");
             //inputV = CrossPlatformInputManager.GetAxis("Mouse Y");
-            inputH = Input.GetAxis("Mouse X");
+            inputH = Input.GetAxis("Mouse X")+Input.GetAxis ("HorizontalRight")* 0.5f;
             inputV = Input.GetAxis("Mouse Y");
 
             Debug.Log("este es inputH" + inputH);
