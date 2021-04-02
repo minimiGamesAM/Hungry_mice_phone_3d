@@ -16,6 +16,7 @@ public class collection_fruits : MonoBehaviour
         if (other.tag == "coin")
         {
             gold++;
+            Instantiate(Resources.Load("PickupEffect"), other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
     }
