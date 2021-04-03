@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MovingObject
   - coin
+  - Enemy
   layers:
   - Default
   - TransparentFX
