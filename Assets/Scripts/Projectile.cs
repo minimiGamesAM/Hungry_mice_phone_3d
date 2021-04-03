@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +23,9 @@ public class Projectile : MonoBehaviour
         if (other.tag == "Enemy")
         {
             Instantiate(Resources.Load("collectable"), other.transform.position, Quaternion.Euler(90,0,0));
+            
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
 
