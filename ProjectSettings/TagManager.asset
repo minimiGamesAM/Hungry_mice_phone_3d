@@ -7,7 +7,6 @@ TagManager:
   - MovingObject
   - coin
   - Enemy
-  - chickens
   layers:
   - Default
   - TransparentFX
