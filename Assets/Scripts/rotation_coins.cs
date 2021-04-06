@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class rotation_coins : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +19,6 @@ public class rotation_coins : MonoBehaviour
     void Update()
     {
         transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
+        
     }
 }
